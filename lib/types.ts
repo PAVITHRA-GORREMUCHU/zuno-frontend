@@ -24,6 +24,17 @@ export interface Listing {
   ownerPhone: string | null;
 }
 
+export interface Room {
+  id: string;
+  listingId: string;
+  roomLabel: string;
+  roomType: string;
+  capacity: number;
+  occupiedCount: number;
+  availableBeds: number;
+  createdAt: string;
+}
+
 export interface PaginationInfo {
   page: number;
   size: number;
