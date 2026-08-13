@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Listing } from '@/lib/types';
+import RoomVacancy from '@/components/RoomVacancy';
 
 interface ListingDetailProps {
   listing: Listing;
@@ -50,7 +51,7 @@ export default function ListingDetail({ listing }: ListingDetailProps) {
               </p>
             </div>
             <div className="text-right">
-              <p className="text-xl font-bold text-teal-600">\u20b9{listing.monthlyRent.toLocaleString('en-IN')}</p>
+              <p className="text-xl font-bold text-teal-600">{'\u20b9'}{listing.monthlyRent.toLocaleString('en-IN')}</p>
               <p className="text-[10px] text-brand-muted">per month</p>
             </div>
           </div>
@@ -81,10 +82,13 @@ export default function ListingDetail({ listing }: ListingDetailProps) {
 
           {listing.securityDeposit && (
             <p className="text-xs text-brand-muted mt-3">
-              Security Deposit: \u20b9{listing.securityDeposit.toLocaleString('en-IN')}
+              Security Deposit: {'\u20b9'}{listing.securityDeposit.toLocaleString('en-IN')}
             </p>
           )}
         </div>
+
+        {/* T-17: Room-level Vacancy Display */}
+        <RoomVacancy listingId={listing.id} />
 
         {/* Amenities */}
         {listing.amenities.length > 0 && (
@@ -108,7 +112,7 @@ export default function ListingDetail({ listing }: ListingDetailProps) {
             <div className="space-y-2">
               {listing.houseRules.map((rule) => (
                 <div key={rule} className="flex items-start gap-2 text-sm text-gray-700">
-                  <span className="text-orange-500 mt-0.5">⚠\ufe0f</span>
+                  <span className="text-orange-500 mt-0.5">⚠️</span>
                   {rule}
                 </div>
               ))}
