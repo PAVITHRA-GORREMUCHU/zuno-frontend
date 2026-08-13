@@ -56,7 +56,7 @@ export default function Home() {
 
         <div className="relative max-w-lg mx-auto">
           <h1 className="text-3xl font-black tracking-tight">
-            Zu<span className="text-teal-200">no</span>
+            <span className="text-brand-text">Zu</span><span className="text-teal-600">no</span>
           </h1>
           <p className="mt-2 text-teal-100 text-sm">
             Find PGs with real prices & live availability
