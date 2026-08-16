@@ -48,17 +48,12 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-brand-bg">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-600 to-teal-800 text-white px-6 pt-12 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-10 w-48 h-48 rounded-full bg-white/20 blur-3xl"></div>
-          <div className="absolute bottom-5 left-5 w-32 h-32 rounded-full bg-white/10 blur-2xl"></div>
-        </div>
-
-        <div className="relative max-w-lg mx-auto">
+      <section className="bg-white px-6 pt-12 pb-8 border-b border-gray-100">
+        <div className="max-w-lg mx-auto">
           <h1 className="text-3xl font-black tracking-tight">
             <span className="text-brand-text">Zu</span><span className="text-teal-600">no</span>
           </h1>
-          <p className="mt-2 text-teal-100 text-sm">
+          <p className="mt-2 text-brand-text text-sm">
             Find PGs with real prices & live availability
           </p>
 
